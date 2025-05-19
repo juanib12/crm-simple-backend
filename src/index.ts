@@ -8,6 +8,7 @@ import { connectDB } from './config/db';
 import authRoutes from './routes/auth.route';
 import clientRoutes from './routes/client.route';
 import orderRoutes from './routes/order.route';
+import activitiesRoutes from './routes/activities.route';
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/clients', clientRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/activities', activitiesRoutes);
 
 // Ruta base
 app.get('/', (_req, res) => {
